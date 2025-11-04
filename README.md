@@ -77,7 +77,7 @@ The map is two A0 white pieces of paper where differents obstacles and goals are
 
 
 <div style="text-align: center;">
-<img src="map_exemple.jpeg" alt="Map example" title="Map example" width="500"/>
+<img src="BOMR_PROJECT_files/map_exemple.jpeg" alt="Map example" title="Map example" width="500"/>
 </div>
 
 ## 2. Libraries
@@ -540,7 +540,7 @@ A controller class `thymio` was developped and incorporated in this project and 
 The two main functions in the thymio class are the `go_to_pos()` and the `turn_90()` functions. go_to_pos() is based on a PID controller who's objectif is to minimize an angle error. This error being the difference between the current Thymio angle and the desired angle. A PID controller was chosen as it is a compact, easy to implement and versatille controller `[4]`. As shown in the figure bellow, a PID controller incorporates `Proportional`, `Intergral` and `Derivative` elements to ouput a `corrective response` u(t) to a given error e(t). This output is used to modify the state of the system y(t) which is then used to calcuate the PID input e(t) = r(t) - y(t). This cycle is repeated until a desired state is achieved. This PID output is used to create differential drive and is based on the document “CS W4733 NOTES - Differential Drive Robots” from Dudek and Jenkin `[5]`. If the wheels of the Thymio turn at different rates, the Thymio will turn and advance or if absolute value of the angular velocities are the same but one is spinning in the opposite direction, the Thymio will turn on itself without changing position.
 
 <div style="text-align: center;">
-<img src="PID_block_diagram.jpeg" alt="PID block diagram" title="PID block diagram" width="500"/>
+<img src="BOMR_PROJECT_files/PID_block_diagram.jpeg" alt="PID block diagram" title="PID block diagram" width="500"/>
 </div>
 
 The PID output u(t) is calculated as follows:
@@ -573,8 +573,8 @@ def angle_PID(self, error, dt):
 The go_to_pos() function evaluates the direction in which the Thymio should turn based on its current position and the objectif position. As shown on the left figure bellow, the angle to correct, the error, is $delta = theta - phi$. Based on this error, the function will decide if the Thymio should turn on itself or should turn and advance and in which direction it shiould turn, clockwise or anti-clockwise. If the angle is bigger than an acceptable offset from the desired angle, the Thymio will turn without moving. Once the Thymio's angle is within this acceptable offset, it will start to advance whilst correcting the remaning angular error by incorporating the PID value for differential drive. It will continue to advance until it reaches an acceptable distance from the objectif and will then indicate to the FSM that it has reached its objectif and will be given a new one. The acceptable angular offset and accpetable distance were implemented to avoid oscillitory behavior where the Thymio would overshoot its current objectif, angular of positional, and would not accomplish its objectifs. The logic described above is illustrated in the right figure bellow and in the go_to_pos() function code bellow.
 
 <div style="text-align: center;">
-    <img src="thymio_angle_image.jpeg" style="margin-right:10px;" width="300">
-    <img src="go_to_pos_image.jpeg" width="330">
+    <img src="BOMR_PROJECT_files/thymio_angle_image.jpeg" style="margin-right:10px;" width="300">
+    <img src="BOMR_PROJECT_files/go_to_pos_image.jpeg" width="330">
 </div>
 
 <font size="1">
@@ -797,10 +797,10 @@ class thymio:
 <div style="display: flex; align-items: center;">
   <div style="flex: none; width: 60%; text-align: left;">
     <p>In order to be fully reactive, the state of the Thymio can be switched from global to local. This is necessary so that the robot's navigation system can adapt its trajectory if an obstacle suddenly appears. Since there is no proximity sensors on the side of the robot, implementing a PID to walk along the wall and get around the obstacle is not possible. We therefore decided to grope our way around the obstacle, in such way that bypassing of the obstacle is a matter of trial and detection. This was inspired by art.<code>[3]</code>. However, every movement of the robot is either parallel or perpendicular to the direction from which the robot was following initially. Turns on itself are 90 degrees. This system allows us to count the distance the robot deviates from the initial trajectory, so that it can return to the path once the obstacle has been avoided. That makes it simple, robust and efficient. Obstacle avoidance stages are 3. First <code>Deviate</code>, enables the robot to move aside until there's a free path to bypass the obstacle. Then <code>Bypass</code> takes the robot along the side of the obstacle until it has passed it. Finally, <code>Back_to_path</code> allow the robot to return to its initial path. There's a last state to allow transition from a state to another. In particular, it would transition back from <em>Back_to_path</em> to <em>Bypass</em> if additional iterations were required. To move, the algorithm calls on function of the Thymio class (<code>go_to_pos</code> and <code>turn_90</code>). For Local Navigation class, the function <code>avoid()</code> was designed to be reused at the several stages during avoidance process, simply changing given parameters. The switch from local to global is only done when the Thymio has returned to the initial path and no others obstacles are detected. The design of the algorithm allows to avoid obstacle with convex front surface, and convex side surface. Implementing local avoidance for concave surface would makes the code too complex, increasing the probability of error, and mainly doesn't make sense, since the thymio plays the role of a rugbyman avoiding the other players. You can see below a diagram of the different states of the local avoidance. <br><br> 
-    <img src="Diagram.jpeg" alt="Diagramme" width="850"/> </p>
+    <img src="BOMR_PROJECT_files/Diagram.jpeg" alt="Diagramme" width="850"/> </p>
   </div>
   <div style="flex: 1; text-align: right; margin-right: 60px;">
-    <img src="Local_Navigation.jpeg" alt="Image" style="width: 430px;"/>
+    <img src="BOMR_PROJECT_files/Local_Navigation.jpeg" alt="Image" style="width: 430px;"/>
   </div>
 </div>
 
