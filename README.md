@@ -6,12 +6,15 @@
 
 ---
 
-**<p style='text-align: center;'> Group members & Sciper</p>**
+**<p style='text-align: center;'> Group members</p>**
 
-<center/> Kilian Pouderoux\n
-<center/> Matas Jones\n
-<center/> Gautier Demierre\n
-<center/> Geoffroy Renaut\n
+<center/> Kilian Pouderoux
+
+<center/> Matas Jones
+
+<center/> Gautier Demierre
+
+<center/> Geoffroy Renaut
 
 **<p style='text-align: center;'> Teacher</p>**
 
