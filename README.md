@@ -20,19 +20,13 @@ Prof. Francesco Mondada
 05.12.2024  
 
 </div>
----
+
+[The notebook BOMR_PROJECT.ipynb contains all the interactive code corresponding to this project]
 
 
 ## Demonstration Video
+[Watch the video](Thymio_project_video.mp4)
 
-<div style="text-align: center">
-<video width="800" height="450" controls>
-    <source src="Thymio_project_video.mp4" type="video/mp4">
-</video>
-<figcaption>Video: Project demonstration.</figcaption>
-<br>
-
-</div>
 
 ## Table of Contents
 
@@ -103,12 +97,6 @@ client = ClientAsync()
 node = await client.wait_for_node()
 await node.lock() 
 ```
-
-
-
-
-    Node 47693a04-0b6a-4e1f-bcfa-ab642b293fc0
-
 
 
 ## 3. Variable definitions
@@ -1516,21 +1504,6 @@ plt.show()
 
     
 ![png](BOMR_PROJECT_files/BOMR_PROJECT_45_0.png)
-    
-
-
-
-    The Kernel crashed while executing code in the current cell or a previous cell. 
-
-
-    Please review the code in the cell(s) to identify a possible cause of the failure. 
-
-
-    Click <a href='https://aka.ms/vscodeJupyterKernelCrash'>here</a> for more info. 
-
-
-    View Jupyter <a href='command:jupyter.viewOutput'>log</a> for further details.
-
 
 ## Bibliography
 
