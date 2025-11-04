@@ -310,7 +310,7 @@ def enlarge_polygon(vertices, margin=15):
 </font>
 
 <div style="text-align: center;">
-<img src="convex_hull.png" alt="Convex hull example image" title="Convex hull example image" width="300"/>
+<img src="BOMR_PROJECT_files/convex_hull.png" alt="Convex hull example image" title="Convex hull example image" width="300"/>
 </div>
 
 Using a triangle to represent the robot allows us to get both the position and the robot orientation. The triangle is designed in a way that the smallest side is the one opposing the tip of the triangle.
@@ -318,7 +318,7 @@ By computing the center of this side and the center of the full triangle, we get
 
 
 <div style="text-align: center;">
-<img src="triangle_robot.png" alt="Triangle example image" title="Triangle example image" width="500"/>
+<img src="BOMR_PROJECT_files/triangle_robot.png" alt="Triangle example image" title="Triangle example image" width="500"/>
 </div>
 
 ### Spaces
