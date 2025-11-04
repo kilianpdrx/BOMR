@@ -202,7 +202,7 @@ colors = {
     'yellow': ([0, 123, 240], [41, 255, 255], -5, [0, 255, 255]), #2, -5
 }
 
-filename = "test.png"
+filename = "BOMR_PROJECT_files/test.png"
 frame = cv2.imread(filename)
 
 if frame is None:
@@ -340,7 +340,7 @@ To enhance performances, we do not want to apply our image processing techniques
 While setting up the scene, we pay attention to dispose the anchors in a rectangular pattern, so we don't need to reorient the frame with a transformation.
 
 <div style="text-align: center;">
-<img src="cropped_process.png" alt="Cropping process example" title="Cropping process example" width="700"/>
+<img src="BOMR_PROJECT_files/cropped_process.png" alt="Cropping process example" title="Cropping process example" width="700"/>
 </div>
 
 
