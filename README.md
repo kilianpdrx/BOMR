@@ -21,11 +21,18 @@ Prof. Francesco Mondada
 
 </div>
 
-[The notebook BOMR_PROJECT.ipynb contains all the interactive code corresponding to this project]
+### The notebook BOMR_PROJECT.ipynb contains all the interactive code corresponding to this project
 
 
 ## Demonstration Video
-[Watch the video](Thymio_project_video.mp4)
+<p align="center">
+  <a href="https://drive.google.com/file/d/1wTRObgNCnMcC-vWDzunhK5DmzSavFFN7/view" target="_blank">
+    <img src="https://img.icons8.com/fluency/96/video-playlist.png" width="120" alt="Play video"/>
+  </a>
+  <br>
+  <em>Visualization of the robot's movement across the map. Left side is the annotated camera's view, right side is the robot's real life evolution.</em>
+</p>
+
 
 
 ## Table of Contents
