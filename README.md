@@ -1,29 +1,25 @@
-# <center/> MICRO-452 - Basics of Mobile Robotics
+<div align="center">
 
-### <center/> Thymio Robot Project
+# MICRO-452 - Basics of Mobile Robotics
 
-#### <center/> Group 17
+### Thymio Robot Project  
+#### Group 17  
 
 ---
 
-**<p style='text-align: center;'> Group members</p>**
+**Group members**  
+Kilian Pouderoux  
+Matas Jones  
+Gautier Demierre  
+Geoffroy Renaut  
 
-<center/> Kilian Pouderoux
+**Teacher**  
+Prof. Francesco Mondada  
 
-<center/> Matas Jones
+**Due date**  
+05.12.2024  
 
-<center/> Gautier Demierre
-
-<center/> Geoffroy Renaut
-
-**<p style='text-align: center;'> Teacher</p>**
-
-<center/> Prof. Francesco Mondada
-
-**<p style='text-align: center;'> Due date</p>**
-
-<center/> 05.12.2024
-
+</div>
 ---
 
 
